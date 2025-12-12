@@ -35,9 +35,6 @@ def compress_flow():
     dec = Decompressor(out_npz)
     recon = dec.decompress()
 
-    from predictor import Predictor2D
-    from quantizer import UniformQuantizer
-
     H, W = meta['shape']
     channels = meta['channels']
     bits = meta['bits']
