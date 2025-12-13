@@ -102,7 +102,7 @@ def compress_flow():
             error_vis[:, :] = err_display
 
     imgs.extend([pred_vis, error_vis, quant_vis, deq_vis])
-    titles.extend(["Predicted", "Error (shifted+128)", "Quantized (mapped)", "De-quantized+Predicted"])
+    titles.extend(["Predicted", "Error ", "Quantized (mapped)", "De-quantized"])
 
     # Save montage
     out_name = f"{os.path.splitext(os.path.basename(path))[0]}_results.png"
